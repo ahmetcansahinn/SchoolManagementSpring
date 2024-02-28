@@ -1,0 +1,30 @@
+services:
+
+  spring.starter:
+    build: ./spring.starter
+    ports:
+      - 8088:8088
+    mem_limit: 700m
+    environment:
+      - spring.data.mongodb.uri=mongodb://root:root@mongodb:27017/school-management?authSource=admin
+    depends_on:
+      - mongodb
+    networks:
+      - school-network
+
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - /Users/cansahin/Desktop/mongo:/data/db
+    networks:
+      - school-network
+
+networks:
+    school-network:
+      driver: bridge
+
