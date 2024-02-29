@@ -25,5 +25,5 @@ public class Teacher {
     private String branch;
 
     @DBRef
-    private List<Class> classes;
+    private List<String> classId;
 }

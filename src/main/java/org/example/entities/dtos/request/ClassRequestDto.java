@@ -1,11 +1,9 @@
 package org.example.entities.dtos.request;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.entities.Class;
 
 import java.util.List;
 
@@ -13,13 +11,10 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TeacherRequestDto {
 
-    private String teacherName;
+public class ClassRequestDto {
+    private int quota;
+    private List<String> studentId;
 
-    private String teacherLastName;
 
-    private String branch;
-
-    private List<String> classId;
 }

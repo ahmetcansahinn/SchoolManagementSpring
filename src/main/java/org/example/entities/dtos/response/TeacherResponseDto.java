@@ -20,5 +20,5 @@ public class TeacherResponseDto {
 
     private String branch;
 
-    private List<Class> classes;
+    private List<String> classId;
 }
