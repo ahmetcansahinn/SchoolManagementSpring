@@ -1,22 +1,16 @@
-package org.example.entities;
-
+package org.example.entities.dtos.response;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import org.example.entities.Class;
+import org.example.entities.Teacher;
 import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-@Document(value = "students")
-public class Student {
-
-    @Id
+@NoArgsConstructor
+public class StudentResponseDto {
     private String studentId;
 
     private String studentName;
@@ -28,6 +22,4 @@ public class Student {
     private Class classes;
 
     private Teacher teacher;
-
-
 }

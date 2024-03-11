@@ -1,6 +1,7 @@
 package org.example.entities.dtos.response;
 
 import lombok.*;
+import org.example.entities.Student;
 
 import java.util.List;
 
@@ -13,5 +14,4 @@ public class ClassResponseDto {
 
     private String classId;
     private int quota;
-    private List<String> studentId;
 }

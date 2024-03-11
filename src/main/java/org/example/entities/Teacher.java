@@ -24,6 +24,4 @@ public class Teacher {
 
     private String branch;
 
-    @DBRef
-    private List<String> classId;
 }

@@ -28,7 +28,7 @@ public class TeacherService implements ITeacherService {
                 .teacherName(requestDto.getTeacherName())
                 .teacherLastName(requestDto.getTeacherLastName())
                 .branch(requestDto.getBranch())
-                .classId(requestDto.getClassId())
+                //.classes(requestDto.getClasses())
                 .build();
 
         Teacher savedTeacher = teacherRepository.save(teacher);
@@ -38,7 +38,7 @@ public class TeacherService implements ITeacherService {
                 .teacherName(savedTeacher.getTeacherName())
                 .teacherLastName(savedTeacher.getTeacherLastName())
                 .branch(savedTeacher.getBranch())
-                .classId(savedTeacher.getClassId())
+                //.classes(savedTeacher.getClasses())
                 .build();
     }
 

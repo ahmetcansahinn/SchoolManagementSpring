@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.example.entities.Class;
+import org.example.entities.Teacher;
 
 import java.util.List;
 
@@ -21,5 +22,4 @@ public class TeacherRequestDto {
 
     private String branch;
 
-    private List<String> classId;
 }

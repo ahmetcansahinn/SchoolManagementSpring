@@ -20,7 +20,5 @@ public class Class {
 
     private int quota;
 
-    @DBRef
-    private List<String> studentId;
 
 }

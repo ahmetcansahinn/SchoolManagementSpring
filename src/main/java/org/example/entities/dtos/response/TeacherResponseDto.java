@@ -2,6 +2,7 @@ package org.example.entities.dtos.response;
 
 import lombok.*;
 import org.example.entities.Class;
+import org.example.entities.Teacher;
 
 import java.util.List;
 
@@ -20,5 +21,4 @@ public class TeacherResponseDto {
 
     private String branch;
 
-    private List<String> classId;
 }

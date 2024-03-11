@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.entities.Student;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class ClassRequestDto {
     private int quota;
-    private List<String> studentId;
+
 
 
 }
