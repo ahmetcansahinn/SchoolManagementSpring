@@ -46,4 +46,13 @@ public class StudentController {
         return new ResponseEntity<StudentResponseDto>(HttpStatus.OK);
     }
 
+    @GetMapping("{classId}")
+    public ResponseEntity<List<StudentResponseDto>>
+    findStudentsByClassId(@PathVariable("classId") String classId){
+        studentService.findStudentsByClassId(classId);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+
+    }
+
 }

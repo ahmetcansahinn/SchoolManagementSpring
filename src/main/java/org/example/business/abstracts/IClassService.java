@@ -1,5 +1,6 @@
 package org.example.business.abstracts;
 
+import org.example.entities.dtos.request.ClassListingRequestDto;
 import org.example.entities.dtos.request.ClassRequestDto;
 import org.example.entities.dtos.response.ClassResponseDto;
 
@@ -9,7 +10,7 @@ public interface IClassService {
 
     ClassResponseDto addClass(ClassRequestDto requestDto);
 
-    List<ClassRequestDto> getAll();
+    List<ClassListingRequestDto> getAll();
 
     void deleteClass(String classId);
 

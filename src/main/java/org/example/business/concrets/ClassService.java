@@ -4,6 +4,8 @@ package org.example.business.concrets;
 import lombok.RequiredArgsConstructor;
 import org.example.business.abstracts.IClassService;
 import org.example.entities.Class;
+import org.example.entities.Student;
+import org.example.entities.dtos.request.ClassListingRequestDto;
 import org.example.entities.dtos.request.ClassRequestDto;
 import org.example.entities.dtos.response.ClassResponseDto;
 import org.example.repository.ClassRepository;
@@ -43,12 +45,12 @@ public class ClassService implements IClassService {
     }
 
     @Override
-    public List<ClassRequestDto> getAll() {
+    public List<ClassListingRequestDto> getAll() {
         List<Class> class1=classRepository.findAll();
 
-        List<ClassRequestDto> requestDtos=new ArrayList<>();
+        List<ClassListingRequestDto> requestDtos=new ArrayList<>();
         for(Class class2 : class1){
-            requestDtos.add(modelMapper.map(class2,ClassRequestDto.class));
+            requestDtos.add(modelMapper.map(class2,ClassListingRequestDto.class));
         }
 
         return requestDtos;
@@ -76,4 +78,5 @@ public class ClassService implements IClassService {
 
 
     }
+
 }

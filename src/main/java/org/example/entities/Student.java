@@ -25,9 +25,12 @@ public class Student {
 
     private int studentNumber;
 
-    private Class classes;
+    private String classId;
 
-    private Teacher teacher;
+    private String teacherId;
+
+
+
 
 
 }

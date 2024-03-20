@@ -1,4 +1,4 @@
-package org.example.core;
+package org.example.core.configurations;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;

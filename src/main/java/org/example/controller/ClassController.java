@@ -2,6 +2,7 @@ package org.example.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.business.abstracts.IClassService;
+import org.example.entities.dtos.request.ClassListingRequestDto;
 import org.example.entities.dtos.request.ClassRequestDto;
 import org.example.entities.dtos.response.ClassResponseDto;
 import org.springframework.http.HttpStatus;
@@ -25,10 +26,10 @@ public class ClassController {
     }
 
     @GetMapping
-    public ResponseEntity<List<ClassRequestDto>> getAllClass(){
-        List<ClassRequestDto> getAllClass=classService.getAll();
+    public ResponseEntity<List<ClassListingRequestDto>> getAllClass(){
+        List<ClassListingRequestDto> getAllClass=classService.getAll();
 
-        return new ResponseEntity<List<ClassRequestDto>>(getAllClass,HttpStatus.OK);
+        return new ResponseEntity<List<ClassListingRequestDto>>(getAllClass,HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
